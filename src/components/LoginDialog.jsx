@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import useAuthStore from '../lib/useAuthStore';
+import '../styles/global.css';
 
 export default function LoginDialog({ onClose, usuarios }) {
   const [username, setUsername] = useState("");

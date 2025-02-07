@@ -10,6 +10,9 @@ interface CardProps {
 // Recibimos las props del curso
 const { imagen, titulo, resumen, opinion, precio, id  } = Astro.props;
 ---
+<head>
+  <link rel="stylesheet" href="../../styles/global.css" />
+</head>
 <div class="bg-black text-white rounded-md shadow-lg overflow-hidden flex flex-col md:flex-row h-64">
   <div class="p-4 flex flex-col justify-center md:w-1/2 h-full">
     <h2 class="text-2xl font-simplicity font-extrabold mb-1 text-red-500">

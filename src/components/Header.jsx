@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import useAuthStore from "../lib/useAuthStore";
 import SearchBar from "./SearchBar.jsx";
 
+
 export default function Header({ postsData, onOpenCart, onOpenLogin }) {
   const [isScrolled, setIsScrolled] = useState(false);
   // Obtenemos el usuario y la función logout desde el store

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import '../styles/global.css';
 
 /**
  * SearchBar component to filter and display cursos.

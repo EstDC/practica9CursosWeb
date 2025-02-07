@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Grid from "./Grid.jsx";
+import '../styles/global.css';
 
 const normalizeString = (str) => {
   return str

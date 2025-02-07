@@ -4,6 +4,7 @@ import Hero from './Hero.jsx'
 import LoginDialog from './LoginDialog.jsx'
 import CartDialog from './CartDialog.jsx'
 import useAuthStore from '../lib/useAuthStore';
+import '../styles/global.css';
 
 export default function HomePage({ cursos, usuarios, showHero = true }) {
   // Obtenemos el usuario global desde el store

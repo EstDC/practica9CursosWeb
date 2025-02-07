@@ -1,6 +1,7 @@
 import React from 'react';
 import Carousel from './Carousel.jsx';
 import SocialNav from './SocialNav.jsx'; // Importa el componente SocialNav.jsx';
+import '../styles/global.css';
 
 const Hero = () => {
   return (

@@ -1,4 +1,5 @@
 import React from "react";
+import '../styles/global.css';
 
 const SocialNav = () => (
 <div className="absolute left-4 top-1/2 transform -translate-y-1/2 flex flex-col space-y-12 font-oswald">

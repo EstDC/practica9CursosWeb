@@ -1,6 +1,7 @@
 import React, { useRef, useEffect } from "react";
 import { updateUsuario } from "../lib/firebase";
 import useAuthStore from "../lib/useAuthStore";
+import '../styles/global.css';
 
 export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
   const modalRef = useRef(null);

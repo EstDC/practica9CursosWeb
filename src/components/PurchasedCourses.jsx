@@ -1,6 +1,7 @@
 import React from 'react';
 import useAuthStore from '../lib/useAuthStore';
 import Grid from './Grid.jsx';
+import '../styles/global.css';
 
 export default function PurchasedCourses({ cursos }) {
   // Obtenemos el usuario global (su propiedad "comprado")

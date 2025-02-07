@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Grid from './Grid.jsx';
+import '../styles/global.css';
 
 export default function CourseFilter({ cursos, initialCategory = '' }) {
   // Estados para cada filtro:
