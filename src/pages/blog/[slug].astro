@@ -6,33 +6,43 @@ import Footer from '../../components/Footer.astro';
 import WidgetComentarios from "../../components/WidgetComentarios.jsx";
 import useAuthStore from "../../lib/useAuthStore"; 
 
-// Generar rutas estáticas solo con los datos en caché
+
 if (cursosCache.length === 0) {
-  await fetchCursosYUsuarios(); // Llama a la base de datos solo si la caché está vacía
+  await fetchCursosYUsuarios();
+} else {
 }
 
+// Función para generar rutas estáticas
 export async function getStaticPaths() {
+  if (cursosCache.length === 0) {
+    await fetchCursosYUsuarios();
+  }
   return cursosCache.map((curso) => ({
     params: { slug: curso.id.toString() },
   }));
 }
 
+// Obtener el parámetro de la URL
 const { slug } = Astro.params;
 
-// Asegurar que la caché está poblada
+//  Asegurar que la caché está poblada antes de buscar el curso
 if (cursosCache.length === 0) {
   await fetchCursosYUsuarios();
 }
 
-// Buscar el curso por su ID
+// Convertir el slug a número y buscar el curso
 const courseId = parseInt(slug, 10);
 const currentCourse = cursosCache.find((curso) => curso.id === courseId);
 
 if (!currentCourse) {
+  console.error(`ERROR: No existe ningún curso con el id: "${slug}"`);
   throw new Error(`No existe ningún curso con el id: "${slug}"`);
 }
 
 ---
+
+
+
 
 <!DOCTYPE html>
 <html lang="es">
