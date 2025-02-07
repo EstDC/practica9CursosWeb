@@ -40,3 +40,32 @@
     font-weight: normal;
     font-style: normal;
   }
+
+  @font-face {
+    font-family: "Quintaras";
+    src: url("/fonts/Quintaras.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Quintaras alt";
+    src: url("/fonts/Quintaras alt.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Quintaras Sans";
+    src: url("/fonts/Quintaras Sans.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "Quintaras Sans Outline";
+    src: url("/fonts/Quintaras Sans Outline.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  

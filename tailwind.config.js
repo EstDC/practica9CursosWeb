@@ -14,6 +14,7 @@ module.exports = {
           wolker: ["'Wolker'", "'Wolkerjuiced'", "'Wolkerjuiceoutline'", "'Wolkeroutline'", "sans-serif"],
           wolkeroutline: ["Wolkeroutline", "sans-serif"], 
           york: ["'York'", "sans-serif"],
+          quintaras: ["'Quintaras'", "'Quintaras alt'", "'Quintaras Sans'", "'Quintaras Sans Outline'", "'Quintaras Sans Outline'", "sans-serif"]
         },
       },
     },
