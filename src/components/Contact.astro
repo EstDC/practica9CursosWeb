@@ -1,0 +1,46 @@
+---
+const contactInfo = [
+  { title: "Dirección", value: "Calle del Diseño, 123, Madrid, España" },
+  { title: "Teléfono", value: "+34 123 456 789" },
+  { title: "Email", value: "info@pixelflow.com" },
+  { title: "Horario", value: "Lunes - Viernes: 9:00 - 18:00" },
+];
+---
+
+<section class="max-w-6xl mx-auto px-8 py-16 bg-white">
+  <!-- Encabezado -->
+  <div class="text-center mb-12">
+    <h2 class="text-4xl font-bold text-gray-900 ">Contáctanos</h2>
+    <p class="text-gray-600 mt-2">
+      ¿Tienes dudas? Estamos aquí para ayudarte. Completa el formulario y te responderemos lo antes posible.
+    </p>
+  </div>
+
+  <!-- Formulario -->
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+    <div class="space-y-6">
+      <div class="grid grid-cols-2 gap-4">
+        <input type="text" placeholder="Nombre" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:outline-none">
+        <input type="text" placeholder="Apellido" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:outline-none">
+      </div>
+      <input type="email" placeholder="Correo Electrónico" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:outline-none">
+      <textarea rows="5" placeholder="Tu Mensaje" class="w-full p-3 border border-gray-300 rounded-md focus:ring-2 focus:ring-red-500 focus:outline-none"></textarea>
+      <button class="w-full bg-red-600 text-white py-3 rounded-md hover:bg-red-700 transition duration-300">
+        Enviar Mensaje
+      </button>
+    </div>
+
+    <!-- Información de Contacto -->
+    <div class="space-y-6">
+      <h3 class="text-xl font-semibold text-gray-900">Información de Contacto</h3>
+      <ul class="space-y-4">
+        {contactInfo.map(info => (
+          <li class="flex items-start space-x-4">
+            <span class="text-red-500 font-semibold">{info.title}:</span>
+            <span class="text-gray-700">{info.value}</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </div>
+</section>

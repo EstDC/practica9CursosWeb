@@ -1,0 +1,74 @@
+---
+import ReactLikeButton from '../components/updateLikes.jsx';
+import AddToCartButton from '../components/AddToCartButton.jsx';
+import VideoButton from '../components/VideoButton.jsx';
+interface PostCursoProps {
+  id: number;
+  titulo: string;
+  resumen: string;
+  descripcion: string;
+  imagen: string;
+  categoria: string;
+  opinion: number;
+  precio: number;
+  novedad: boolean;
+  oferta: boolean;
+  video: string;
+  likes: number;
+}
+
+const curso = Astro.props as PostCursoProps;
+---
+<article class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden my-12">
+  <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <figure class="w-full h-full">
+      <img 
+        src={curso.imagen} 
+        alt={curso.titulo} 
+        class="w-full h-full object-cover rounded-l-lg"
+      />
+    </figure>
+    <div class="p-8 flex flex-col justify-between">
+      <nav class="text-sm text-gray-500 mb-3">
+        <a href="/" class="hover:text-gray-800">Home</a> › 
+        <span class="text-gray-700">{curso.titulo}</span>
+      </nav>
+      <h1 class="text-3xl md:text-4xl font-bold text-gray-900">{curso.titulo}</h1>
+      <p class="text-gray-600 mt-3">{curso.resumen}</p>
+      <p class="text-gray-600 mt-3">{curso.descripcion}</p>
+      <div class="mt-5">
+        <h3 class=" text-red-500 font-york text-5xl">Highlights:</h3>
+        <ul class="list-disc list-inside text-gray-700 text-sm mt-2">
+          <li>Categoría: <strong>{curso.categoria}</strong></li>
+          <li>Opinión: <strong>{curso.opinion}/5</strong></li>
+          {curso.novedad && <li class="text-red-500">¡Nuevo Curso!</li>}
+          {curso.oferta && <li class="text-green-500">¡En Oferta!</li>}
+        </ul>
+        <ReactLikeButton client:load postId={curso.id} initialLikes={curso.likes}/>
+      </div>
+      <div class="bg-gray-100 p-4 rounded-lg mt-5 flex justify-between items-center">
+        <div>
+          <p class="text-gray-500 text-sm">Precio</p>
+          <p class="text-2xl font-bold text-gray-900">€{curso.precio}</p>
+        </div>
+      </div>
+
+      {/* Botón para ver el video, solo si hay URL */}
+<!--       {curso.video && (
+        <a 
+          href={curso.video} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          class="w-full bg-black hover:bg-gray-900 text-white font-bold py-3 rounded-lg mt-4 text-center"
+        >
+           Ver Video de Introducción
+        </a>
+      )} -->
+      {curso.video && <VideoButton client:load curso={curso} />}
+        <AddToCartButton client:load curso={curso} />
+<!--       <button class="w-full bg-red-600 hover:bg-red-700 text-white font-bold py-3 rounded-lg mt-4">
+        Comprar Curso
+      </button> -->
+    </div>
+  </div>
+</article>

@@ -1,0 +1,158 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  @font-face {
+    font-family: "Oswald";
+    src: url("/fonts/Oswald-Regular.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: "ArcadiaNova-Regular";
+    src: url("/fonts/ArcadiaNova-Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Brooklyn-Bold";
+    src: url("/fonts/Brooklyn-Bold.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Brooklyn-Heavy";
+    src: url("/fonts/Brooklyn-Heavy.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Brooklyn-Normal";
+    src: url("/fonts/Brooklyn-Normal.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Felix";
+    src: url("/fonts/Felix.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Felix Clean";
+    src: url("/fonts/Felix Clean.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Forever Freedom Outline";
+    src: url("/fonts/Forever Freedom Outline.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Forever Freedom Outline Italic";
+    src: url("/fonts/Forever Freedom Outline Italic.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Forever Freedom Regular";
+    src: url("/fonts/Forever Freedom Regular.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Husterdun Script";
+    src: url("/fonts/Husterdun Script.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Husterdun Serif";
+    src: url("/fonts/Husterdun Serif.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Khela Outline";
+    src: url("/fonts/Khela Outline.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Morline";
+    src: url("/fonts/Morline.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Morline Slant";
+    src: url("/fonts/Morline Slant.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Portico Outline";
+    src: url("/fonts/Portico Outline.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Prospec Outline";
+    src: url("/fonts/Prospec Outline.otf") format("opentype");
+  }
+  
+  @font-face {
+    font-family: "Quintaras";
+    src: url("/fonts/Quintaras.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Quintaras alt";
+    src: url("/fonts/Quintaras alt.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Quintaras Sans";
+    src: url("/fonts/Quintaras Sans.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Quintaras Sans Outline";
+    src: url("/fonts/Quintaras Sans Outline.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "URBANOLight";
+    src: url("/fonts/URBANOLight.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "URBANOOutlined";
+    src: url("/fonts/URBANOOutlined.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Wolker";
+    src: url("/fonts/Wolker.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Wolkerjuiced";
+    src: url("/fonts/Wolkerjuiced.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Wolkerjuiceoutline";
+    src: url("/fonts/Wolkerjuiceoutline.ttf") format("truetype");
+  }
+  
+  @font-face {
+    font-family: "Wolkeroutline";
+    src: url("/fonts/Wolkeroutline.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+  
+  @font-face {
+    font-family: "York";
+    src: url("/fonts/York.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+    
+  @font-face {
+    font-family: "New";
+    src: url("/fonts/New.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+  }

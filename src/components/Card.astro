@@ -1,0 +1,49 @@
+---
+interface CardProps {
+  imagen: string;
+  titulo: string;
+  resumen: string;
+  opinion: number;
+  precio: number;
+}
+
+// Recibimos las props del curso
+const { imagen, titulo, resumen, opinion, precio, id  } = Astro.props;
+---
+<div class="bg-black text-white rounded-md shadow-lg overflow-hidden flex flex-col md:flex-row h-64">
+  <div class="p-4 flex flex-col justify-center md:w-1/2 h-full">
+    <h2 class="text-2xl font-simplicity font-extrabold mb-1 text-red-500">
+      {titulo}
+    </h2>
+    <p class="text-sm font-Helvetica mb-2">
+      {resumen}
+    </p>
+    <p class="text-sm font-bold">
+      Opinión: {opinion} / 5
+    </p>
+    <p class="text-sm font-bold mt-2">
+      {precio} € 
+    </p>
+    <a 
+      href={`/blog/${id}`}
+      class="mt-4 inline-block border border-red-600 text-red-600 py-2 px-4 rounded
+             hover:bg-red-600 hover:text-white transition-colors"
+    >
+      Detalles
+    </a>
+  </div>
+  <div class="relative md:w-1/2 h-full">
+    <img
+      src={imagen}
+      alt={titulo}
+      class="w-full h-full object-cover object-center"
+    />
+    <div 
+      class="absolute inset-0" style={{
+        background:
+          "linear-gradient(to right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.9) 10%, rgba(0, 0, 0, 0) 50%)",
+        opacity: 1
+      }} 
+    ></div>
+  </div>
+</div>
