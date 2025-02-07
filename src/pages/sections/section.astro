@@ -8,15 +8,15 @@ import Footer from '../../components/Footer.astro';
 const url = new URL(Astro.request.url);
 const misCursos = url.searchParams.get('misCursos') === 'true';
 
-console.log("URL actual:", Astro.request.url);
+/* console.log("URL actual:", Astro.request.url); */
 
 // Si cursosCache está vacío, obtenemos los datos de Firebase
 if (cursosCache.length === 0) {
-  console.log("Recuperando cursos desde Firebase...");
+/*   console.log("Recuperando cursos desde Firebase..."); */
   await fetchCursosYUsuarios();
 }
 
-console.log("Cursos disponibles en cache:", cursosCache.length);
+/* console.log("Cursos disponibles en cache:", cursosCache.length); */
 ---
 
 <html>

@@ -19,7 +19,7 @@ export const fetchCursosYUsuarios = async () => {
 
     // data => { cursos: [ ... ], usuarios: [ ... ] }
     const data = await resp.json();
-    console.log("Firebase data:", data);
+    /* console.log("Firebase data:", data); */
 
     // Guardamos la info en caché
     cursosCache = data.cursos || [];

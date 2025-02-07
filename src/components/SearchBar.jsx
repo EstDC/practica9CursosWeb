@@ -31,7 +31,7 @@ function SearchBar({ cursos }) {
       curso.resumen?.toLowerCase().includes(lowerTerm) ||
       curso.descripcion?.toLowerCase().includes(lowerTerm)
     );
-    console.log("Filtered Results:", filtrados); 
+    /* console.log("Filtered Results:", filtrados);  */
     setFilteredResults(filtrados);
     setIsModalOpen(true);
   };

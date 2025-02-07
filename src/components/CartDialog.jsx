@@ -25,12 +25,12 @@ export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
   const total = cartCourses.reduce((acc, course) => acc + course.precio, 0);
 
   async function handleClearCart() {
-    console.log("handleClearCart llamado");
+    /* console.log("handleClearCart llamado"); */
     const updatedUser = { ...user, carrito: [] };
-    console.log("Usuario actualizado (vaciar carrito):", updatedUser);
+    /* console.log("Usuario actualizado (vaciar carrito):", updatedUser); */
     try {
       const result = await updateUsuario(user.id, updatedUser);
-      console.log("Resultado de updateUsuario (clear cart):", result);
+      /* console.log("Resultado de updateUsuario (clear cart):", result); */
       if (result) {
         // Actualizamos el store global
         updateUser(updatedUser);
@@ -46,7 +46,7 @@ export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
   }
 
   async function handlePurchase() {
-    console.log("handlePurchase llamado");
+    /* console.log("handlePurchase llamado"); */
     if (cartCourses.length === 0) {
       alert("El carrito está vacío.");
       return;
@@ -62,10 +62,10 @@ export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
       comprado: updatedPurchased,
       carrito: [],
     };
-    console.log("Usuario actualizado (compra):", updatedUser);
+    /* console.log("Usuario actualizado (compra):", updatedUser); */
     try {
       const result = await updateUsuario(user.id, updatedUser);
-      console.log("Resultado de updateUsuario (purchase):", result);
+      /* console.log("Resultado de updateUsuario (purchase):", result); */
       if (result) {
         // Actualizamos el store global
         updateUser(updatedUser);
