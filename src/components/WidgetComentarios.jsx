@@ -30,12 +30,17 @@ export default function WidgetComentarios({ slug }) {
 
   return (
     <section className="bg-white p-6 rounded-lg shadow-md border border-gray-100 max-w-3xl mx-auto my-28">
-<h2 className="relative text-3xl font-bold text-black mb-4 border-b-2 border-red-500 pb-2 font-wolker">
-  <span className="absolute top-0.5 left-12 font-wolkeroutline text-3xl font-bold text-black">
+<h2 className="relative text-3xl font-bold text-black mb-4 border-b-2 border-red-500 pb-2 font-wolker flex items-center">
+  <img src="/img/chat-bot.png" className="w-9 h-9 mr-2" alt="Opiniones" />
+  <span className="absolute font-wolkeroutline text-3xl font-bold text-black left-12 top-1">
     Opiniones
   </span>
-  💬 Opiniones
+  <span className="relative font-wolker text-3xl font-bold text-black">
+    Opiniones
+  </span>
 </h2>
+
+
 
       {/* Formulario de comentario */}
       <form className="flex flex-col mt-4" onSubmit={handleEnvioComentario}>
