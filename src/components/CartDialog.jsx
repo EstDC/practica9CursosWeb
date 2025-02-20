@@ -1,12 +1,40 @@
 import React, { useRef, useEffect } from "react";
 import { updateUsuario } from "../lib/firebase";
 import useAuthStore from "../lib/useAuthStore";
+import { currencyRates } from "../lib/currencyRates";
 import '../styles/global.css';
 
 export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
   const modalRef = useRef(null);
   // Obtenemos la función updateUser del store global
   const updateUser = useAuthStore((state) => state.updateUser);
+
+  // Obtener idioma y moneda desde el store global useAuthStore
+  const lang = useAuthStore((state) => state.language) || "es";
+  const selectedCurrency = useAuthStore((state) => state.currency) || "EUR";
+  const rate = currencyRates[selectedCurrency] || 1;
+  const currencySymbol = selectedCurrency === "USD" ? "$" : selectedCurrency === "GBP" ? "£" : "€";
+
+  // Constantes de traducción para textos fijos
+  const texts = {
+    es: {
+      title: "Tu Carrito",
+      empty: "No tienes cursos en el carrito",
+      total: "Total",
+      clearCart: "Vaciar Carrito",
+      purchase: "Comprar",
+      close: "Cerrar"
+    },
+    en: {
+      title: "Your Cart",
+      empty: "No items selected",
+      total: "Total",
+      clearCart: "Clear Cart",
+      purchase: "Purchase",
+      close: "Close"
+    }
+  };
+  const t = texts[lang] || texts.es;
 
   // Cierra el modal si se hace clic fuera de él
   useEffect(() => {
@@ -23,19 +51,16 @@ export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
 
   // Filtrar los cursos que están en el carrito del usuario
   const cartCourses = cursos.filter((course) => user.carrito.includes(course.id));
-  const total = cartCourses.reduce((acc, course) => acc + course.precio, 0);
+  // Calcula el total convertido
+  const total = (cartCourses.reduce((acc, course) => acc + course.precio, 0) * rate).toFixed(2);
 
   async function handleClearCart() {
-    /* console.log("handleClearCart llamado"); */
     const updatedUser = { ...user, carrito: [] };
-    /* console.log("Usuario actualizado (vaciar carrito):", updatedUser); */
     try {
       const result = await updateUsuario(user.id, updatedUser);
-      /* console.log("Resultado de updateUsuario (clear cart):", result); */
       if (result) {
         // Actualizamos el store global
         updateUser(updatedUser);
-        // Llamamos al callback onUpdateUser para acciones adicionales, si se define
         if (onUpdateUser) onUpdateUser(updatedUser, false);
       } else {
         alert("Error al actualizar el carrito en Firebase");
@@ -47,7 +72,6 @@ export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
   }
 
   async function handlePurchase() {
-    /* console.log("handlePurchase llamado"); */
     if (cartCourses.length === 0) {
       alert("El carrito está vacío.");
       return;
@@ -63,14 +87,10 @@ export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
       comprado: updatedPurchased,
       carrito: [],
     };
-    /* console.log("Usuario actualizado (compra):", updatedUser); */
     try {
       const result = await updateUsuario(user.id, updatedUser);
-      /* console.log("Resultado de updateUsuario (purchase):", result); */
       if (result) {
-        // Actualizamos el store global
         updateUser(updatedUser);
-        // Llamamos al callback onUpdateUser para acciones adicionales, si se define
         if (onUpdateUser) onUpdateUser(updatedUser, true);
         onClose(); // Cierra el modal tras la compra
       } else {
@@ -85,35 +105,37 @@ export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 z-50">
       <div ref={modalRef} className="bg-white p-6 rounded shadow-lg w-96">
-        <h2 className="text-2xl font-bold mb-4">Tu Carrito</h2>
+        <h2 className="text-2xl font-bold mb-4">{t.title}</h2>
 
         {cartCourses.length === 0 ? (
-          <p>No tienes cursos en el carrito</p>
+          <p>{t.empty}</p>
         ) : (
           <ul className="mb-4 space-y-2">
             {cartCourses.map((course) => (
               <li key={course.id} className="border-b py-2 flex justify-between">
                 <span className="font-semibold">{course.titulo}</span>
-                <span>${course.precio}</span>
+                <span>{currencySymbol}{(course.precio * rate).toFixed(2)}</span>
               </li>
             ))}
           </ul>
         )}
 
-        <p className="font-bold mb-4 text-lg">Total: ${total.toFixed(2)}</p>
+        <p className="font-bold mb-4 text-lg">
+          {t.total}: {currencySymbol}{total}
+        </p>
 
         <div className="flex gap-2">
           <button
             onClick={handleClearCart}
             className="bg-red-500 text-white px-3 py-2 rounded hover:bg-red-600"
           >
-            Vaciar Carrito
+            {t.clearCart}
           </button>
           <button
             onClick={handlePurchase}
             className="bg-green-600 text-white px-3 py-2 rounded hover:bg-green-700"
           >
-            Comprar
+            {t.purchase}
           </button>
         </div>
 
@@ -121,7 +143,7 @@ export default function CartDialog({ user, onClose, onUpdateUser, cursos }) {
           onClick={onClose}
           className="mt-4 bg-gray-400 text-white py-1 px-3 rounded hover:bg-gray-500"
         >
-          Cerrar
+          {t.close}
         </button>
       </div>
     </div>

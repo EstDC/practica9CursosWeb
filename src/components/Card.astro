@@ -1,4 +1,7 @@
 ---
+import { currencyRates } from '../lib/currencyRates';
+import useAuthStore from '../lib/useAuthStore';
+
 interface CardProps {
   imagen: string;
   titulo: string;
@@ -8,7 +11,23 @@ interface CardProps {
 }
 
 // Recibimos las props del curso
-const { imagen, titulo, resumen, opinion, precio, id  } = Astro.props;
+const { imagen, titulo, resumen, opinion, precio, id, traducciones, categoria } = Astro.props;
+
+// Obtener idioma y moneda desde el store global (si window está definido)
+const lang = typeof window !== "undefined" ? (useAuthStore.getState().language || "es") : "es";
+const selectedCurrency = typeof window !== "undefined" ? (useAuthStore.getState().currency || "EUR") : "EUR";
+
+// Si hay traducciones y el idioma es inglés, usar traducciones
+const displayTitle = lang === "en" && traducciones && traducciones.en && traducciones.en.title ? traducciones.en.title : titulo;
+const displaySummary = lang === "en" && traducciones && traducciones.en && traducciones.en.summary ? traducciones.en.summary : resumen;
+const displayCategory = lang === "en" && traducciones && traducciones.en && traducciones.en.category ? traducciones.en.category : categoria;
+
+// Importamos las tasas de conversión
+const rate = currencyRates[selectedCurrency] || 1;
+const convertedPrice = (precio * rate).toFixed(2);
+
+// Definimos el símbolo de la moneda
+const currencySymbol = selectedCurrency === "USD" ? "$" : selectedCurrency === "GBP" ? "£" : "€";
 ---
 <head>
   <link rel="stylesheet" href="../../styles/global.css" />
@@ -16,21 +35,20 @@ const { imagen, titulo, resumen, opinion, precio, id  } = Astro.props;
 <div class="bg-black text-white rounded-md shadow-lg overflow-hidden flex flex-col md:flex-row h-64">
   <div class="p-4 flex flex-col justify-center md:w-1/2 h-full">
     <h2 class="text-2xl font-simplicity font-extrabold mb-1 text-red-500">
-      {titulo}
+      {displayTitle}
     </h2>
     <p class="text-sm font-Helvetica mb-2">
-      {resumen}
+      {displaySummary}
     </p>
     <p class="text-sm font-bold">
       Opinión: {opinion} / 5
     </p>
     <p class="text-sm font-bold mt-2">
-      {precio} € 
+      {currencySymbol}{convertedPrice}
     </p>
     <a 
       href={`/blog/${id}`}
-      class="mt-4 inline-block border border-red-600 text-red-600 py-2 px-4 rounded
-             hover:bg-red-600 hover:text-white transition-colors"
+      class="mt-4 inline-block border border-red-600 text-red-600 py-2 px-4 rounded hover:bg-red-600 hover:text-white transition-colors"
     >
       Detalles
     </a>
@@ -38,7 +56,7 @@ const { imagen, titulo, resumen, opinion, precio, id  } = Astro.props;
   <div class="relative md:w-1/2 h-full">
     <img
       src={imagen}
-      alt={titulo}
+      alt={displayTitle}
       class="w-full h-full object-cover object-center"
     />
     <div 
@@ -50,3 +68,4 @@ const { imagen, titulo, resumen, opinion, precio, id  } = Astro.props;
     ></div>
   </div>
 </div>
+

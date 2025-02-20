@@ -2,13 +2,44 @@ import React, { useState, useEffect } from "react";
 import useAuthStore from "../lib/useAuthStore";
 import SearchBar from "./SearchBar.jsx";
 
-
 export default function Header({ postsData, onOpenCart, onOpenLogin }) {
   const [isScrolled, setIsScrolled] = useState(false);
-  // Obtenemos el usuario y la función logout desde el store
+  // Obtenemos el usuario y las funciones de autenticación desde el store
   const user = useAuthStore((state) => state.user);
   const logout = useAuthStore((state) => state.logout);
 
+  // Obtener idioma y moneda desde el store global (valores por defecto "es" y "EUR")
+  const language = useAuthStore((state) => state.language) || "es";
+  const currency = useAuthStore((state) => state.currency) || "EUR";
+
+  // Obtener setters para actualizar idioma y moneda desde el store
+  const setLanguage = useAuthStore((state) => state.setLanguage);
+  const setCurrency = useAuthStore((state) => state.setCurrency);
+
+  // Cargar la configuración desde localStorage al montar el componente (opcional para sincronizar store con localStorage)
+  useEffect(() => {
+    const storedLanguage = localStorage.getItem("language");
+    const storedCurrency = localStorage.getItem("currency");
+    if (storedLanguage) {
+      setLanguage(storedLanguage);
+    }
+    if (storedCurrency) {
+      setCurrency(storedCurrency);
+    }
+  }, [setLanguage, setCurrency]);
+
+  // Funciones para actualizar idioma y moneda y guardarlos en localStorage
+  function handleLanguageChange(newLang) {
+    setLanguage(newLang);
+    localStorage.setItem("language", newLang);
+  }
+
+  function handleCurrencyChange(newCurr) {
+    setCurrency(newCurr);
+    localStorage.setItem("currency", newCurr);
+  }
+
+  // Efecto para actualizar el estado de desplazamiento
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -90,7 +121,26 @@ export default function Header({ postsData, onOpenCart, onOpenLogin }) {
             </li>
           </ul>
         </nav>
-
+        {/* Selectores para idioma y moneda */}
+        <div className="flex items-center gap-4">
+          <select
+            className="bg-gray-800 text-white px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+            value={language}
+            onChange={(e) => handleLanguageChange(e.target.value)}
+          >
+            <option value="es">ES</option>
+            <option value="en">EN</option>
+          </select>
+          <select
+            className="bg-gray-800 text-white px-2 py-1 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+            value={currency}
+            onChange={(e) => handleCurrencyChange(e.target.value)}
+          >
+            <option value="EUR">€</option>
+            <option value="USD">$</option>
+            <option value="GBP">£</option>
+          </select>
+        </div>
       </div>
     </header>
   );

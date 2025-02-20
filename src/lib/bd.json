@@ -13,7 +13,15 @@
       "comprado": ["Juan", "Maria"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=LQ2KU--v73I",
-      "likes": 12
+      "likes": 12,
+      "traducciones": {
+        "en": {
+          "title": "Introduction to Digital Illustration",
+          "summary": "Learn basic illustration concepts using digital tools.",
+          "description": "This course will introduce you to the essential principles of illustration in digital environments.\nWe will work with brushes, layers, and color adjustments so you can develop your own style.\nBy the end, you'll have a series of complete illustrations for your portfolio.",
+          "category": "Illustration"
+        }
+      }
     },
     {
       "id": 2,
@@ -28,7 +36,15 @@
       "comprado": [],
       "oferta": true,
       "video": "https://www.youtube.com/watch?v=xCngK7n5jX0",
-      "likes": 3
+      "likes": 3,
+      "traducciones": {
+        "en": {
+          "title": "Graphic Design for Social Media",
+          "summary": "Create attractive graphics and visual content for social platforms.",
+          "description": "In this course, you will learn how to adapt your designs to various social media formats.\nYou will master the combination of typography and color to maximize viewer attention.\nBy the end, you'll have templates and knowledge ready to apply in real campaigns.",
+          "category": "Design"
+        }
+      }
     },
     {
       "id": 3,
@@ -43,7 +59,15 @@
       "comprado": ["Luis"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=eX1cSewHCNg",
-      "likes": 41
+      "likes": 41,
+      "traducciones": {
+        "en": {
+          "title": "Concept Art for Video Games",
+          "summary": "Develop worlds and characters with an artistic and narrative vision.",
+          "description": "Concept art is crucial in the creation of video games. We will teach you how to combine creativity and technical skills.\nYou will explore visual storytelling, environment design, and initial character sketches.\nBy the end, your portfolio will feature several concept arts ready to impress potential employers.",
+          "category": "Concept Art"
+        }
+      }
     },
     {
       "id": 4,
@@ -58,7 +82,15 @@
       "comprado": ["Ana", "Roberto"],
       "oferta": true,
       "video": "https://www.youtube.com/watch?v=opHV-d-u9y0",
-      "likes": 30
+      "likes": 30,
+      "traducciones": {
+        "en": {
+          "title": "2D Character Creation",
+          "summary": "Design, draw, and bring characters to life in two dimensions.",
+          "description": "Learn to synthesize ideas and shapes to create expressive characters.\nWe will review basic anatomy, proportion studies, and line styles.\nBy the end, you'll be able to create complete character sheets for your projects.",
+          "category": "Character Creation"
+        }
+      }
     },
     {
       "id": 5,
@@ -73,7 +105,15 @@
       "comprado": ["Maria"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=k-mEz54_p90",
-      "likes": 62
+      "likes": 62,
+      "traducciones": {
+        "en": {
+          "title": "3D Modeling with Blender",
+          "summary": "Create 3D objects and characters with Blender, a free software.",
+          "description": "In this course, you'll become familiar with Blender's interface and its powerful modeling tools.\nYou will discover sculpting techniques, UV mapping, and basic texturing.\nYou can export your models for video games, animations, or 3D printing.",
+          "category": "3D"
+        }
+      }
     },
     {
       "id": 6,
@@ -88,7 +128,15 @@
       "comprado": ["Juan", "Roberto"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=XP9d0_5HjyA",
-      "likes": 103
+      "likes": 103,
+      "traducciones": {
+        "en": {
+          "title": "Artistic Anatomy for Illustrators",
+          "summary": "Study the human body to improve the accuracy of your illustrations.",
+          "description": "Anatomy is the foundation for drawing realistic human figures.\nIn this course, you'll delve into bones, muscles, and proportions, enhancing your observational skills.\nYou'll learn techniques to add dynamism and anatomical credibility to your characters.",
+          "category": "Anatomy"
+        }
+      }
     },
     {
       "id": 7,
@@ -103,7 +151,15 @@
       "comprado": [],
       "oferta": true,
       "video": "https://www.youtube.com/watch?v=bFYWNDCAQdY",
-      "likes": 10
+      "likes": 10,
+      "traducciones": {
+        "en": {
+          "title": "Traditional Pencil Drawing",
+          "summary": "Perfect your drawing fundamentals with classic techniques.",
+          "description": "With pencil, you'll discover the versatility of lines, shading, and textures.\nExercises in perspective and basic composition will be covered.\nBy the end, you'll have a stronger command of traditional drawing that you can apply in other artistic areas.",
+          "category": "Traditional Drawing"
+        }
+      }
     },
     {
       "id": 8,
@@ -118,14 +174,22 @@
       "comprado": ["Ana", "Carla"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=tNJpz_7EcEE",
-      "likes": 85
+      "likes": 85,
+      "traducciones": {
+        "en": {
+          "title": "Digital Painting with Photoshop",
+          "summary": "Master digital brushes and layers to create professional illustrations.",
+          "description": "Photoshop is a benchmark in the world of digital painting.\nYou'll learn its interface, brush settings, and color management to enhance your illustrations.\nYou'll complete several practical projects, from portraits to fantastical scenes.",
+          "category": "Illustration"
+        }
+      }
     },
     {
       "id": 9,
       "titulo": "Ilustración de Portadas de Libros",
       "resumen": "Aprende a crear portadas atractivas que conecten con el lector.",
       "descripcion": "En este curso verás cómo combinar ilustración y tipografía para crear portadas que capten la esencia de la obra.\nAnalizaremos casos de éxito y técnicas compositivas que destaquen en el mercado editorial.\nAl finalizar, podrás presentar tus propios diseños de portada a clientes o editoriales.",
-      "imagen": "https://cdna.artstation.com/p/assets/images/images/029/301/738/large/mitch-mohrhauser-mythic-cutscenes-5.jpg?1597105461",
+      "imagen": "https://cdnb.artstation.com/p/assets/images/images/029/301/738/large/mitch-mohrhauser-mythic-cutscenes-5.jpg?1597105461",
       "categoria": "Diseño",
       "opinion": 4.1,
       "precio": 44.99,
@@ -133,14 +197,22 @@
       "comprado": ["Luis"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=1vuXskHlm_g",
-      "likes": 64
+      "likes": 64,
+      "traducciones": {
+        "en": {
+          "title": "Book Cover Illustration",
+          "summary": "Learn to create attractive covers that connect with readers.",
+          "description": "In this course, you'll see how to combine illustration and typography to create covers that capture the essence of a work.\nWe'll analyze successful cases and compositional techniques that stand out in the publishing market.\nBy the end, you'll be able to present your own cover designs to clients or publishers.",
+          "category": "Design"
+        }
+      }
     },
     {
       "id": 10,
       "titulo": "Concept Art para Cine",
       "resumen": "Diseña mundos y escenas para producciones cinematográficas.",
       "descripcion": "Explora la creación de arte conceptual para películas de ciencia ficción, fantasía y más.\nAprende sobre narración visual, moodboards y la presentación profesional de tus conceptos.\nAl finalizar, tendrás una serie de imágenes que reflejen la atmósfera y estilo de proyectos cinematográficos.",
-      "imagen": "https://cdna.artstation.com/p/assets/images/images/067/119/334/large/chromatic-studio-pietro-nume-4-2.jpg?1694597391",
+      "imagen": "https://cdnb.artstation.com/p/assets/images/images/067/119/334/large/chromatic-studio-pietro-nume-4-2.jpg?1694597391",
       "categoria": "Concept-Art",
       "opinion": 4.6,
       "precio": 69.99,
@@ -148,14 +220,22 @@
       "comprado": ["Ana", "Juan"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=46fuMAR-vlA",
-      "likes": 125
+      "likes": 125,
+      "traducciones": {
+        "en": {
+          "title": "Concept Art for Film",
+          "summary": "Design worlds and scenes for film productions.",
+          "description": "Explore the creation of conceptual art for sci-fi, fantasy, and more.\nLearn about visual storytelling, mood boards, and professionally presenting your concepts.\nBy the end, you'll have a series of images that reflect the atmosphere and style of film projects.",
+          "category": "Concept Art"
+        }
+      }
     },
     {
       "id": 11,
       "titulo": "Creación de Personajes Fantásticos",
       "resumen": "Diseña criaturas y seres únicos inspirados en la fantasía.",
       "descripcion": "Elabora personajes que rompan con la anatomía humana habitual y mezclen elementos de la naturaleza o mitologías.\nAprenderás a conceptualizar, bocetar y dar un acabado profesional a tus creaciones.\nÚtil para juegos de rol, ilustraciones conceptuales o incluso cómics fantásticos.",
-      "imagen": "https://cdna.artstation.com/p/assets/images/images/071/933/344/large/tatyana-kupriyanova-pirates-nightshade-intensity-default-v1.jpg?1706251449",
+      "imagen": "https://cdnb.artstation.com/p/assets/images/images/071/933/344/large/tatyana-kupriyanova-pirates-nightshade-intensity-default-v1.jpg?1706251449",
       "categoria": "Creación de Personajes",
       "opinion": 4.3,
       "precio": 24.99,
@@ -163,7 +243,15 @@
       "comprado": ["Roberto"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=volKe9dav8Y&t=283s",
-      "likes": 72
+      "likes": 72,
+      "traducciones": {
+        "en": {
+          "title": "Creation of Fantastic Characters",
+          "summary": "Design unique creatures and beings inspired by fantasy.",
+          "description": "From human figure proportions to wardrobe and personality, every detail counts.\nWe'll practice quick sketches and final designs ready for inking or coloring.\nThe result will be a cast of characters ready to star in your story.",
+          "category": "Character Creation"
+        }
+      }
     },
     {
       "id": 12,
@@ -178,7 +266,15 @@
       "comprado": ["Maria", "Juan"],
       "oferta": true,
       "video": "https://www.youtube.com/watch?v=AsygBRaRnUA",
-      "likes": 86
+      "likes": 86,
+      "traducciones": {
+        "en": {
+          "title": "Fundamentals of Digital Sculpting",
+          "summary": "Immerse your ideas in a 3D environment with sculpting tools.",
+          "description": "Discover software like ZBrush to mold your own creatures and characters.\nStudy basic forms, volumes, and textures intuitively, almost like clay.\nYou can use your final models in video games, films, or 3D printing.",
+          "category": "3D"
+        }
+      }
     },
     {
       "id": 13,
@@ -193,7 +289,15 @@
       "comprado": [],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=V_E1ARR_AAg",
-      "likes": 54
+      "likes": 54,
+      "traducciones": {
+        "en": {
+          "title": "Advanced Anatomy for Artists",
+          "summary": "Explore in detail the bone and muscle structure for greater realism.",
+          "description": "Ideal for those who already have a foundation in anatomy and wish to deepen specific areas.\nYou'll learn to draw twists, movements, and complex human postures.\nYour characters will gain in precision and dynamism.",
+          "category": "Anatomy"
+        }
+      }
     },
     {
       "id": 14,
@@ -208,7 +312,15 @@
       "comprado": ["Carla"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=GjVGfTPqaoA",
-      "likes": 67
+      "likes": 67,
+      "traducciones": {
+        "en": {
+          "title": "Watercolor Techniques for Illustrators",
+          "summary": "Add freshness and texture to your illustrations with watercolors.",
+          "description": "Controlling water flow, gradients, and transparencies is key in this technique.\nExplore different types of paper and brushes to achieve stunning results.\nFinish with several watercolor pieces that showcase your artistic versatility.",
+          "category": "Traditional Drawing"
+        }
+      }
     },
     {
       "id": 15,
@@ -223,7 +335,15 @@
       "comprado": ["Juan", "Luis"],
       "oferta": true,
       "video": "https://www.youtube.com/watch?v=4Azc4Gs2nlU",
-      "likes": 9
+      "likes": 9,
+      "traducciones": {
+        "en": {
+          "title": "UI/UX Design for Apps",
+          "summary": "Learn to create intuitive and attractive user experiences.",
+          "description": "User-centered design defines the success of an app.\nIn this course, you'll create wireframes, prototypes, and learn to test interfaces with users.\nYou'll finish with a set of best practices and a final functional app project.",
+          "category": "Design"
+        }
+      }
     },
     {
       "id": 16,
@@ -238,7 +358,15 @@
       "comprado": [],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=D1CReMRbwAk&t=49s",
-      "likes": 20
+      "likes": 20,
+      "traducciones": {
+        "en": {
+          "title": "2D Animation with Toon Boom",
+          "summary": "Create fluid and eye-catching 2D animations.",
+          "description": "From the basics of animation to character lip sync and acting, you'll learn scene planning, interpolation, and frame-by-frame techniques.\nBy the end, you'll have several animated shorts for your reel.",
+          "category": "Character Creation"
+        }
+      }
     },
     {
       "id": 17,
@@ -253,7 +381,15 @@
       "comprado": ["Ana"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=-ZbmRsOnApk&list=PLB0wXHrWAmCwnqWfKdGEmbtSKN2EzvLrY",
-      "likes": 39
+      "likes": 39,
+      "traducciones": {
+        "en": {
+          "title": "3D Texturing with Substance Painter",
+          "summary": "Apply realistic or stylized materials and textures to your 3D models.",
+          "description": "Import your models and discover a non-destructive workflow.\nYou'll learn to paint and generate masks that let you create wood, metal, rock, and more surfaces.\nYour 3D projects will look much more professional after this course.",
+          "category": "3D"
+        }
+      }
     },
     {
       "id": 18,
@@ -261,14 +397,22 @@
       "resumen": "Complementa artículos y reportajes con ilustraciones innovadoras.",
       "descripcion": "El reto en este campo es traducir conceptos complejos en imágenes simples y efectivas.\nEstudiaremos ejemplos de ilustradores reconocidos y su técnica de composición.\nPodrás ofrecer tus servicios a publicaciones físicas o digitales con un portafolio sólido.",
       "imagen": "https://cdna.artstation.com/p/assets/images/images/007/586/952/large/greg-rutkowski-church-scene-2-1920.jpg?1507143836",
-      "categoria": "Ilustración",
+      "categoria": "Diseño",
       "opinion": 4.4,
       "precio": 29.99,
       "novedad": false,
       "comprado": ["Roberto"],
       "oferta": true,
       "video": "https://www.youtube.com/watch?v=TvhLgXodHZk",
-      "likes": 58
+      "likes": 58,
+      "traducciones": {
+        "en": {
+          "title": "Editorial Illustration for Magazines",
+          "summary": "Enhance articles and reports with innovative illustrations.",
+          "description": "The challenge in this field is to translate complex concepts into simple, effective images.\nWe will study examples of renowned illustrators and their compositional techniques.\nYou'll be able to offer your services to print or digital publications with a solid portfolio.",
+          "category": "Design"
+        }
+      }
     },
     {
       "id": 19,
@@ -283,7 +427,15 @@
       "comprado": ["Maria", "Carla"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=7A8oFZkDhHs",
-      "likes": 71
+      "likes": 71,
+      "traducciones": {
+        "en": {
+          "title": "Visual Storytelling",
+          "summary": "Learn to tell impactful stories through images.",
+          "description": "From the main idea to the narrative sequence, you'll see how visual elements can communicate more than words.\nWe'll analyze film and comic storyboards to understand rhythm and composition.\nAfter the course, you'll have the ability to structure effective visual projects.",
+          "category": "Design"
+        }
+      }
     },
     {
       "id": 20,
@@ -298,7 +450,15 @@
       "comprado": ["Luis"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=7A8oFZkDhHs",
-      "likes": 83
+      "likes": 83,
+      "traducciones": {
+        "en": {
+          "title": "Matte Painting for Environments",
+          "summary": "Create photorealistic digital environments for films or video games.",
+          "description": "Combine photographs and digital painting to create environments that would be impossible to film in real life.\nLearn to maintain perspective, lighting, and visual cohesion.\nAn essential course for those aspiring to work in the entertainment industry.",
+          "category": "Concept Art"
+        }
+      }
     },
     {
       "id": 21,
@@ -313,7 +473,15 @@
       "comprado": ["Juan"],
       "oferta": true,
       "video": "https://www.youtube.com/watch?v=volKe9dav8Y",
-      "likes": 97
+      "likes": 97,
+      "traducciones": {
+        "en": {
+          "title": "Comic Character Design",
+          "summary": "Create heroes and villains with distinctive styles for your comics.",
+          "description": "From human figure proportions to wardrobe and personality, every detail counts.\nWe'll practice quick sketches and final designs ready for inking or coloring.\nThe result will be a cast of characters ready to star in your story.",
+          "category": "Character Design"
+        }
+      }
     },
     {
       "id": 22,
@@ -328,7 +496,15 @@
       "comprado": [],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=-2g8WHn78u8&list=PLVEOy5RIy5DXfxUp6jCKO7ovZXHzZOv6k",
-      "likes": 109
+      "likes": 109,
+      "traducciones": {
+        "en": {
+          "title": "Professional Photo Retouching",
+          "summary": "Transform images with advanced editing and photomontage techniques.",
+          "description": "You will learn to adjust colors, correct skin and hair, and remove unwanted elements.\nYou'll discover methods to integrate multiple photos into one harmonious composition.\nThis course is key for advertising, fashion, and artistic photography.",
+          "category": "Design"
+        }
+      }
     },
     {
       "id": 23,
@@ -343,7 +519,15 @@
       "comprado": ["Maria"],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=Of-mweV392I",
-      "likes": 119
+      "likes": 119,
+      "traducciones": {
+        "en": {
+          "title": "Introduction to Caricature Drawing",
+          "summary": "Exaggerate facial features for humorous and original portraits.",
+          "description": "The caricaturist must identify the model's distinctive features and humorously exaggerate them.\nYou'll develop keen observation and freehand drawing skills to capture a person's character.\nBy the end, you'll be able to entertain at events or create personalized caricatures.",
+          "category": "Traditional Drawing"
+        }
+      }
     },
     {
       "id": 24,
@@ -358,7 +542,15 @@
       "comprado": ["Ana", "Roberto"],
       "oferta": true,
       "video": "https://www.youtube.com/watch?v=ItNoHd8tqi8",
-      "likes": 111
+      "likes": 111,
+      "traducciones": {
+        "en": {
+          "title": "Motion Graphics with After Effects",
+          "summary": "Animate graphic elements and text for dynamic videos.",
+          "description": "After Effects brings your static designs to life with transitions, effects, and animations.\nYou'll focus on creating intros, lower thirds, and typographic animations.\nIdeal for complementing advertising videos or audiovisual presentations.",
+          "category": "Design"
+        }
+      }
     },
     {
       "id": 25,
@@ -373,7 +565,15 @@
       "comprado": [],
       "oferta": false,
       "video": "https://www.youtube.com/watch?v=LF7lvq3OYqk",
-      "likes": 112
+      "likes": 112,
+      "traducciones": {
+        "en": {
+          "title": "Children's Illustration",
+          "summary": "Connect with children's imagination through colorful characters and settings.",
+          "description": "In this course, you'll discover the importance of color, soft shapes, and expressiveness in children's illustration.\nYou'll work on tender characters, imaginative worlds, and simple yet striking compositions.\nThe result will be illustrations perfect for children's books or educational material.",
+          "category": "Illustration"
+        }
+      }
     }
   ],
   "usuarios": [
